@@ -3,9 +3,14 @@
 </head>
 <script type='text/javascript' src='src/ms.min.js'></script>
 <link rel="stylesheet" href='src/main.min.css'>
-<body onload='munch(63)'>
+<body onload='window.N=63; window.step=200; munch()'>
 <canvas id='mycanvas' height='500px' width='500px'></canvas>
-<p style="text-align:center;color:white;">...</p>
+<p style="color:white;text-align:center;">
+    <button id="decSquares">-</button>
+    <button id="incSquares">+</button>
+    <button id="slowDown"><</button>
+    <button id="speedUp">></button>
+ </p>
 
 </body>
 </html>
