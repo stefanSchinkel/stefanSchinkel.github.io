@@ -40,12 +40,12 @@ function meshgrid(N) {
 }
 
 function renderBoard(grid, x) {
-
-  var N = grid.length; // no of squares
-  var L = 500 / N; // length of side
-
+  // acquire canvas
   var canvas = document.getElementById('mycanvas');
+  var N = grid.length; // no of squares
+  var L = canvas.height / N; // length of side
   var ctx = canvas.getContext('2d');
+
   var i, j;
   for (i = 0;  i < N; i++) {
     for (j = 0; j < N; j++) {
@@ -59,13 +59,14 @@ function renderBoard(grid, x) {
   }
 }
 
-function munch(N) {
+function munch() {
   /* @function
    *
    * @description
    * munching squares of size N
    *
    * @param {Number} N  no of squares per col/row
+   * @param {Number} step timeout
    *
   */
   var i, j;
@@ -95,9 +96,6 @@ function munch(N) {
     } else {
       counter++;
     }
-  }, 200);
+  }, step);
 }
 
-// module.exports.meshgrid = meshgrid;
-// module.exports.repmat = repmat;
-// module.exports.range = range;
