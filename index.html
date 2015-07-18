@@ -1,9 +1,9 @@
 <html>
 <head>
 </head>
-<script type='text/javascript' src='src/ms.min.js'></script>
-<link rel="stylesheet" href='src/main.min.css'>
-<body onload='window.N=63; window.step=200; munch()'>
+<script type='text/javascript' src='src/ms.js'></script>
+<link rel="stylesheet" href='src/main.css'>
+
 <canvas id='mycanvas' height='500px' width='500px'></canvas>
 <p style="color:white;text-align:center;">
     <button id="decSquares">-</button>
@@ -13,4 +13,12 @@
  </p>
 
 </body>
+<script>
+//  $().ready() w/out jQuery
+(function() {
+    window.N=63;
+    window.step=200;
+    munch();
+})();
+</script>
 </html>

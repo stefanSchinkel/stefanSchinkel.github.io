@@ -1,17 +1,21 @@
 /*jslint bitwise: true */
-
+/*global window */
 function repmat(x, n) {
   // repeat a value n times as an array
   var arr = [];
   var i;
-  for (i = 0; i < n; i++) { arr = arr.concat(x); }
+  for (i = 0; i < n; i++) {
+    arr = arr.concat(x);
+  }
   return arr;
 }
 function range(n) {
   // primitive range() function
   var arr = [];
   var i;
-  for (i = 0; i < n; i++) { arr[i] = i + 1; }
+  for (i = 0; i < n; i++) {
+    arr[i] = i + 1;
+  }
   return arr;
 }
 
@@ -69,6 +73,8 @@ function munch() {
    * @param {Number} step timeout
    *
   */
+  var N = window.N;
+  var step = window.step;
   var i, j;
   var mask = [];
   // construct mask
