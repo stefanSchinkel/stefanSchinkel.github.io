@@ -13,12 +13,21 @@ module.exports = function (grunt) {
       }
     },
     uglify: {
-    my_target: {
-      files: {
-        'dist/main.min.js': ['src/ms.js']
+      my_target: {
+        files: {
+          'dist/main.min.js': ['src/ms.js']
+        }
       }
+    },
+    watch: {
+      scripts: {
+        files: ['src/*.js'],
+        tasks: ['uglify'],
+        options: {
+          spawn: false,
+        },
+      },
     }
-  }
   });
   // REGISTER TASKS ============================================================
   grunt.registerTask('default', ['cssmin', 'uglify']);
@@ -26,5 +35,6 @@ module.exports = function (grunt) {
   // LOAD GRUNT PLUGINS ========================================================
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
