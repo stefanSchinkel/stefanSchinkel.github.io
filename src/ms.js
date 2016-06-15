@@ -2,8 +2,6 @@
 /*global window */
 "use strict";
 
-
-
 var MS = {
 
   repmat: function (x, n) {
