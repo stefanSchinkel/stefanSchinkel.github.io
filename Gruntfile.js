@@ -12,11 +12,17 @@ module.exports = function (grunt) {
         }
       }
     },
-
+    uglify: {
+    my_target: {
+      files: {
+        'dist/main.min.js': ['src/ms.js']
+      }
+    }
+  }
   });
   // REGISTER TASKS ============================================================
-  // grunt.registerTask('default', ['cssmin', 'uglify']);
-  grunt.registerTask('default', ['cssmin']);
+  grunt.registerTask('default', ['cssmin', 'uglify']);
+
   // LOAD GRUNT PLUGINS ========================================================
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
